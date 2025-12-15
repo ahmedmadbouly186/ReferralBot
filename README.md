@@ -1,5 +1,7 @@
 # Telegram Giveaways & Referrals Bot
 
+![plot](./demo/Thumbnail-preview.png)
+
 ## 🎯 Executive Summary
 
 A **production-ready Telegram bot** that turns user referrals into a powerful growth engine. Manage giveaways, issue secure reward codes, and broadcast announcements—all from Telegram, with zero database costs.

@@ -1,0 +1,34 @@
+referral_system
+1-user could generate his invitation link by /generate_link
+
+2-after referral some people users will get a message like this:
+"
+Congrats you have reached tire1 in referrals, write /generate_reward_code to get your reward code or continue until reaching tire2
+"
+
+3- The user will ask for reward  /generate_reward_code then the bot will reply with 6 digit number and store this number in a Google sheet
+if the user referrals count >= tire 1 and less than tire2 then reduce the tire1 limit from the referrals count and generate code
+same for tire2 , same for tire3 "if the referrals greater or equal tire3 limit "
+ 
+4-user requests his reward using  /redeem_reward_code <reward code>, then the bot checks if the code is valid or expired, if expired then deletes from the sheet and sends a message with expiration to the user, else deletes from the sheet and sends it to the admin the userid and username and reward tire (1 or 2 or 3) and date of generation the code
+
+the bot will delete the reward code once the user has redeemed his reward, whether it has expired or not.
+
+
+
+promotions:
+1-admin will write /broadcast <Message>
+, if the writer is not the admin, then the bot will reply with a message
+"
+You are not authorized to use this command.
+"
+else the bot will take the message and send it to all users
+
+2-After the bot broadcasts the promotion, the bot generates a sub Google sheet with the name "Promotion Log date yyyy-mm-dd time hh:mm:ss." The sub sheet contains all chatIDs with the status success or failure and the message itself. It also stores the total successes and total failures.
+
+
+3- to support bold and ittalic in broadcast promotions we will use html format
+<b>This text is bold</b>
+<i>This text is italic</i>
+
+4- for media promotions , the admin will send the media in the chatbot and caption will start with /broadcast ,after /broadcast the admin could write and text ,also subbord text and italic

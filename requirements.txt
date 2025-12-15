@@ -1,0 +1,6 @@
+beautifulsoup4==4.12.3
+gspread==6.1.4
+protobuf==5.28.3
+pyTelegramBotAPI==4.24.0
+python-telegram-bot==21.7
+Requests==2.32.3
